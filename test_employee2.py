@@ -61,7 +61,12 @@ class TestEmployee(unittest.TestCase):
             mocked_get.assert_called_with('http://company.com/Shafer/May')
             self.assertEqual(schedule, 'Sucess')
 
+            mocked_get.return_value.ok = False
 
+            schedule = self.emp_2.monthly_schedule('June')
+            mocked_get.assert_called_with('http://company.com/Smith/June')
+            self.assertEqual(schedule, 'Bad Response!')
+            
 
 if __name__ == '__main__':
     unittest.main()                  
