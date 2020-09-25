@@ -16,18 +16,18 @@ class TestEmployee(unittest.TestCase):
     
     def test_email(self):
         print('test_email')
-        self.assertEqual(self.emp_1.email, 'Corey.Shafer@email.com')
-        self.assertEqual(self.emp_2.email, ' Sue.Smith@email.com')
+        self.assertEqual(self.emp_1.email, 'Corey.Schafer@email.com')
+        self.assertEqual(self.emp_2.email, 'Sue.Smith@email.com')
 
         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
 
-        self.assertEqual(self.emp_1.email, 'John,Schafer@email.com')
+        self.assertEqual(self.emp_1.email, 'John.Schafer@email.com')
         self.assertEqual(self.emp_2.email, 'Jane.Smith@email.com')
 
     def test_fullname(self):
         print('test_fullname')
-        self.assertEqual(self.emp_1.fullname, 'Corey Shafer')
+        self.assertEqual(self.emp_1.fullname, 'Corey Schafer')
         self.assertEqual(self.emp_2.fullname, 'Sue Smith')
 
         self.emp_1.first = 'John'
