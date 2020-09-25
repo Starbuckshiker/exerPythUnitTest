@@ -29,7 +29,7 @@ class TestEmployee(unittest.TestCase):
         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
 
-        self.assertEqual(self.emp_1.email, 'John,Schafer@email.com')
+        self.assertEqual(self.emp_1.email, 'John.Schafer@email.com')
         self.assertEqual(self.emp_2.email, 'Jane.Smith@email.com')
 
     def test_fullname(self):
