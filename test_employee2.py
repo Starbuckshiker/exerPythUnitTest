@@ -40,6 +40,9 @@ class TestEmployee(unittest.TestCase):
         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
 
+        self.assertEqual(self.emp_1.fullname, 'John Shafer')
+        self.assertEqual(self.emp_2.fullname, 'Jane Smith')
+
     def test_apply_raise(self):
         print('test_apply_raise')
         self.emp_1.apply_raise()
