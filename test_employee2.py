@@ -53,8 +53,17 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.pay, 63000)
 
     def test_monthly_schedule(self):
-        with patch('employee.request.get') as mocked_get:
+        with patch('employee.requests.get') as mocked_get:
+            mocked_get.return.value.ok = True
+            mocked_get.return.value.text = 'Success'
+
+            schedule = self.emp_1.monthly_schedule('May')
+            mocked_get.assert_called_with('http://company.com/Shafer/May')
+            self.assertEqual(schedule, 'Sucess')
             
-                   
+
+
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()                  
+
+
