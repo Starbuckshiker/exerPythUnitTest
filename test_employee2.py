@@ -24,7 +24,7 @@ class TestEmployee(unittest.TestCase):
     def test_email(self):
         print('test_email')
         self.assertEqual(self.emp_1.email, 'Corey.Schafer@email.com')
-        self.assertEqual(self.emp_2.email, ' Sue.Smith@email.com')
+        self.assertEqual(self.emp_2.email, 'Sue.Smith@email.com')
 
         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
@@ -40,7 +40,7 @@ class TestEmployee(unittest.TestCase):
         self.emp_1.first = 'John'
         self.emp_2.first = 'Jane'
 
-        self.assertEqual(self.emp_1.fullname, 'John Shafer')
+        self.assertEqual(self.emp_1.fullname, 'John Schafer')
         self.assertEqual(self.emp_2.fullname, 'Jane Smith')
 
     def test_apply_raise(self):
