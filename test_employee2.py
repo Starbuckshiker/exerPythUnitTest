@@ -5,11 +5,11 @@ from employee import Employee
 class TestEmployee(unittest.TestCase):
 
     @classmethod
-    def setUpClass(cls)
+    def setUpClass(cls):
         print('setupClass')
 
     @classmethod
-    def setDownClass(cls)
+    def setDownClass(cls):
         print('teardownClass')
 
     def setUp(self):
