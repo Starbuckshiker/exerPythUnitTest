@@ -4,7 +4,14 @@ from employee import Employee
 
 class TestEmployee(unittest.TestCase):
 
-    
+    @classmethod
+def setUpClass(cls)
+    print('setupClass')
+
+@classmethod
+def setDownClass(cls)
+    print('teardownClass')
+
     def setUp(self):
         print('setUp')
         self.emp_1 = Employee('Corey', 'Schafer', 50000)
@@ -43,4 +50,3 @@ class TestEmployee(unittest.TestCase):
         
 if __name__ == '__main__':
     unittest.main()
-    
