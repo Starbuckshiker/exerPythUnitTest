@@ -1,3 +1,5 @@
+import requests
+
 class Employee:
     """A sample Employee Class"""
 
@@ -26,7 +28,7 @@ class Employee:
         if response.ok:
             return response.text
         else:
-            return 'Bad Response'
+            return 'Bad Response!'
             
 emp_1 = Employee('Corer', 'Schafer', 50000)
 emp_2 = Employee( 'Test', 'User', 60000)
